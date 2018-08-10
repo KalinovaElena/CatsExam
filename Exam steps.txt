@@ -1,0 +1,157 @@
+1. Download files
+2. Copy files to folder on Desktop
+3.JS - open Webstorm - folder/js
+4. Run npm install // (Shift + Shift: terminal) npm install
+5. Shift+ Shift : "//todo"  Enter
+6. Open models.
+7. Create properties 
+-------------
+name: {
+            type: Sequelize.TEXT, // google search sequelize model definition
+
+        },
+		
+...
+----------------
+8. Open Controllers
+9. Check Views/Create - to see structure ( cat[price]) 
+----------
+   index: async (req, res) => {
+        // TODO
+        let cats = await Cat.findAll();
+        res.render('cat/index.hbs', {'cats': cats});
+    },
+-----------	
+	
+10.Xampp
+11. Create DB: 
+	- config/config.js - copy db name
+	- open Heidi
+	- create new db
+12. Start app - bin/www - run
+
+13. Controllers/cat.js: 
+create GEt: 
+
+res.render('cat/create')
+
+
+Create Post 
+---------
+  let args = req.body.cat;
+        Cat.create(args).then(
+            res.redirect('/')
+        );
+--------
+
+14. Edit Get (check routes.js for params)
+--------------
+  let id=req.params.id;
+
+        Cat.findById(id).then(cat=>{
+            res.render('cat/edit', {'cat':cat})
+        })
+		
+---------------------
+15. Copy to delete get and change res.render
+
+16. Re-run
+
+Ctrl+Alt+l - format code
+
+17. 
+Edit post, 
+delete post
+re-run
+
+check if everything is working
+
+
+-------------------------
+PHP
+PhpStorm
+
+1.Open php folder
+2. Composer install if not (shift+shift : composer install)
+3. Search for //todo
+4. delete entity/cat.php
+5. terminal : php bin/console doctrine:generate:entity
+name: AppBundle:Cat
+Entert
+	field: name
+	...
+	price: type:float
+	
+6. Form/file.php - form
+
+ $builder
+            ->add('name', TextType::class)
+            ->add('nickname', TextType::class)
+            ->add('price', NumberType::class);
+			
+7. Create DB
+php bin/console doctrine:database:create
+php bin/console doctrine:schema:update --force
+
+8. CatController.php
+index
+create
+ testing
+ 
+ 9. Edit Configuration to testing
+ + PhpScript
+ check Single Instance Only
+ file : bin/console
+ Argument : server:run
+ OK
+ 
+ 10.
+ edit
+delete
+
+
+/////////////////////////////////////
+
+
+Java
+IntellyJ
+Import Project
+update Intellyj if needed 
+
+folder/java
+SDK 1.8!!!
+
+1. Search for //todo
+2. Entity - cat
+price - double;
+and other properties
+Alt + Insert - getters and setters for all
+Alt + Insert - Constructor for all
+Alt + insert Constructor - empty for main class
+
+3. BindingModel
+properties;
+getters and setters
+full constructor
+empty constructor
+
+4. Controller
+delete return null
+fill in index
+test
+
+edit/delete
+test
+
+
+////////////////
+C#
+click on file and open Visual Studio
+
+View/Takslist
+
+
+
+
+
+
