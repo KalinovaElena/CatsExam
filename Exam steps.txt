@@ -150,7 +150,8 @@ click on file and open Visual Studio
 
 View/Takslist
 
-
+Controller
+model
 
 
 
